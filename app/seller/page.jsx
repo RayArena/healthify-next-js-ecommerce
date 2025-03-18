@@ -44,7 +44,7 @@ const AddProduct = () => {
         setFiles([]);
         setName('');
         setDescription('');
-        setCategory('Earphone');
+        setCategory('Tablet');
         setPrice('');
         setOfferPrice('');
       } else {
@@ -127,13 +127,10 @@ const AddProduct = () => {
               onChange={(e) => setCategory(e.target.value)}
               defaultValue={category}
             >
-              <option value="Earphone">Earphone</option>
-              <option value="Headphone">Headphone</option>
-              <option value="Watch">Watch</option>
-              <option value="Smartphone">Smartphone</option>
-              <option value="Laptop">Laptop</option>
-              <option value="Camera">Camera</option>
-              <option value="Accessories">Accessories</option>
+              <option value="Tablet">Tablet</option>
+              <option value="Liquid">Liquid</option>
+              <option value="Injection">Injection</option>
+              <option value="Other">Other</option>
             </select>
           </div>
           <div className="flex flex-col gap-1 w-32">
