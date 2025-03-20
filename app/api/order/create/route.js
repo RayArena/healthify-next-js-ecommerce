@@ -1,5 +1,5 @@
-import connectDBm from "@/config/dbm";
 import { inngest } from "@/config/inngest";
+import User from "@/models/User";
 import Product from "@/models/Product";
 import { getAuth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
@@ -19,8 +19,9 @@ export async function POST(request) {
         // Calculating amount using items
         const amount = await items.reduce(async (acc, item) => {
             const product = await Product.findById(item.product)
-            return acc + (product.offerPrice * item.quantity)
+            return await acc + (product.offerPrice * item.quantity)
         },0)
+        const finalAmount = amount + Math.floor(amount * 0.02);
 
         await inngest.send({
             name: 'order/created',
@@ -28,7 +29,7 @@ export async function POST(request) {
                 userId,
                 address,
                 items,
-                amount: amount + Math.floor(amount * 0.02),
+                amount: finalAmount,
                 date: Date.now()
             }
         })
