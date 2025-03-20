@@ -16,8 +16,6 @@ const ProductList = () => {
   const [loading, setLoading] = useState(true)
 
   const fetchSellerProduct = async () => {
-    // setProducts(productsDummyData)
-    // setLoading(false)
     try {
 
       const token = await getToken()
