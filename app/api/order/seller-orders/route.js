@@ -1,6 +1,7 @@
 import connectDBm from '@/config/dbm'
 import authSeller from '@/lib/authSeller'
-import Product from '@/models/Product'
+import Address from '@/models/Address'
+import Order from '@/models/Order'
 import { getAuth } from '@clerk/nextjs/server'
 import { NextResponse } from 'next/server'
 
@@ -17,8 +18,10 @@ export async function GET(request) {
 
     await connectDBm()
 
-    const products = await Product.find({})
-    return NextResponse.json({ success:true, products })
+    Address.length
+
+    const orders = await Order.find({}).populate('address items.product')
+    return NextResponse.json({ success:true, orders })
 
   } catch (error) {
     return NextResponse.json({ success:false, message: error.message })
