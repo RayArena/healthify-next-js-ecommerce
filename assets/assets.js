@@ -42,6 +42,9 @@ import jbl_soundbox_image from "./jbl_soundbox_image.png";
 import boy_with_laptop_image from "./boy_with_laptop_image.png";
 import checkmark from "./checkmark.png";
 import check_up_img from "./check_up_img.png"
+import januvia_banner from "./januvia_banner.png" 
+import digene_banner from "./digene_banner.png"
+import duphalac_banner from "./duphalac_banner.png"
 
 export const assets = {
   logo,
@@ -87,7 +90,10 @@ export const assets = {
   jbl_soundbox_image,
   boy_with_laptop_image,
   checkmark,
-  check_up_img
+  check_up_img,
+  januvia_banner,
+  digene_banner,
+  duphalac_banner
 };
 
 export const BagIcon = () => {

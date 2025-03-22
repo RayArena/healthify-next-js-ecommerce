@@ -6,27 +6,27 @@ const HeaderSlider = () => {
   const sliderData = [
     {
       id: 1,
-      title: "Experience Pure Sound - Your Perfect Headphones Awaits!",
+      title: "Manage Diabetes with Confidence – Januvia 100 mg Tablet for Better Control!",
       offer: "Limited Time Offer 30% Off",
       buttonText1: "Buy now",
       buttonText2: "Find more",
-      imgSrc: assets.header_headphone_image,
+      imgSrc: assets.januvia_banner,
     },
     {
       id: 2,
-      title: "Next-Level Gaming Starts Here - Discover PlayStation 5 Today!",
-      offer: "Hurry up only few lefts!",
+      title: "Say Goodbye to Acidity – Try Digene Antacid Antigas Gel Mint Flavour, 200 ml Today!",
+      offer: "Limited-Time Offer – Grab Your Discount Now!",
       buttonText1: "Shop Now",
       buttonText2: "Explore Deals",
-      imgSrc: assets.header_playstation_image,
+      imgSrc: assets.digene_banner,
     },
     {
       id: 3,
-      title: "Power Meets Elegance - Apple MacBook Pro is Here for you!",
+      title: "Gentle Relief, Powerful Care – Duphalac Oral Solution is Here for You!",
       offer: "Exclusive Deal 40% Off",
       buttonText1: "Order Now",
       buttonText2: "Learn More",
-      imgSrc: assets.header_macbook_image,
+      imgSrc: assets.duphalac_banner,
     },
   ];
 
@@ -44,7 +44,7 @@ const HeaderSlider = () => {
   };
 
   return (
-    <div className="overflow-hidden relative w-full">
+    <div className="overflow-hidden relative w-half">
       <div
         className="flex transition-transform duration-700 ease-in-out"
         style={{
@@ -55,6 +55,7 @@ const HeaderSlider = () => {
           <div
             key={slide.id}
             className="flex flex-col-reverse md:flex-row items-center justify-between bg-[#E6E9F2] py-8 md:px-14 px-5 mt-6 rounded-xl min-w-full"
+            style={{ height: "65vh" }} // Updated to 65% of viewport height
           >
             <div className="md:pl-8 mt-10 md:mt-0">
               <p className="md:text-base text-orange-600 pb-1">{slide.offer}</p>
@@ -71,9 +72,9 @@ const HeaderSlider = () => {
                 </button>
               </div>
             </div>
-            <div className="flex items-center flex-1 justify-center">
+            <div className="flex items-center flex-1 justify-center h-full">
               <Image
-                className="md:w-72 w-48"
+                className="md:w-auto h-full object-contain"
                 src={slide.imgSrc}
                 alt={`Slide ${index + 1}`}
               />
