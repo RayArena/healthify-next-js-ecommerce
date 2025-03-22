@@ -85,9 +85,9 @@ const Product = () => {
                         {productData.description}
                     </p>
                     <p className="text-3xl font-medium mt-6">
-                        ${productData.offerPrice}
+                        ₹{productData.offerPrice}
                         <span className="text-base font-normal text-gray-800/60 line-through ml-2">
-                            ${productData.price}
+                            ₹{productData.price}
                         </span>
                     </p>
                     <hr className="bg-gray-600 my-6" />
@@ -97,10 +97,6 @@ const Product = () => {
                                 <tr>
                                     <td className="text-gray-600 font-medium">Brand</td>
                                     <td className="text-gray-800/50 ">Generic</td>
-                                </tr>
-                                <tr>
-                                    <td className="text-gray-600 font-medium">Color</td>
-                                    <td className="text-gray-800/50 ">Multi</td>
                                 </tr>
                                 <tr>
                                     <td className="text-gray-600 font-medium">Category</td>
