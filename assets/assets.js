@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./logo.png";
 import search_icon from "./search_icon.svg";
 import user_icon from "./user_icon.svg";
 import cart_icon from "./cart_icon.svg";
@@ -41,6 +41,7 @@ import sm_controller_image from "./sm_controller_image.png";
 import jbl_soundbox_image from "./jbl_soundbox_image.png";
 import boy_with_laptop_image from "./boy_with_laptop_image.png";
 import checkmark from "./checkmark.png";
+import check_up_img from "./check_up_img.png"
 
 export const assets = {
   logo,
@@ -85,7 +86,8 @@ export const assets = {
   sm_controller_image,
   jbl_soundbox_image,
   boy_with_laptop_image,
-  checkmark
+  checkmark,
+  check_up_img
 };
 
 export const BagIcon = () => {
