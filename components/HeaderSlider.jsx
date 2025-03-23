@@ -55,7 +55,7 @@ const HeaderSlider = () => {
           <div
             key={slide.id}
             className="flex flex-col-reverse md:flex-row items-center justify-between bg-[#E6E9F2] py-8 md:px-14 px-5 mt-6 rounded-xl min-w-full"
-            style={{ height: "65vh" }} // Updated to 65% of viewport height
+            style={{ height: "65vh" }} // Keeping the 65% viewport height
           >
             <div className="md:pl-8 mt-10 md:mt-0">
               <p className="md:text-base text-orange-600 pb-1">{slide.offer}</p>
@@ -74,7 +74,7 @@ const HeaderSlider = () => {
             </div>
             <div className="flex items-center flex-1 justify-center h-full">
               <Image
-                className="md:w-auto h-full object-contain"
+                className="md:w-auto md:h-full h-40 object-contain" // Added h-40 for mobile to make image smaller
                 src={slide.imgSrc}
                 alt={`Slide ${index + 1}`}
               />
